@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="Conheça a proteção veicular 21go! Fale com Ariel pelo WhatsApp e consulte as opções disponíveis para seu veículo.">
+<title>21go! | Proteção Veicular</title>
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--blue:#168bff;--cyan:#42d7ff;--white:#f6f9ff;--muted:#b5c4d8;--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:1.8rem;font-weight:900;letter-spacing:-1px}.brand span{color:var(--cyan)}nav{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.94rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;background:var(--blue);color:white;font-weight:800;border:0;cursor:pointer;transition:.2s}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.btn.outline{background:transparent;border:1px solid var(--line)}
+.hero{padding:76px 0 66px;overflow:hidden;background:radial-gradient(ellipse at 80% 20%,rgba(22,139,255,.22),transparent 45%),linear-gradient(135deg,#07111f,#0a1c31)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{display:inline-block;color:var(--cyan);font-weight:800;letter-spacing:1.6px;text-transform:uppercase;font-size:.78rem;margin-bottom:14px}
+h1{font-size:clamp(2.4rem,5vw,4.7rem);line-height:1.02;letter-spacing:-2px;margin:0 0 22px}h1 span{color:var(--cyan)}.lead{font-size:1.12rem;color:var(--muted);max-width:580px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.fine{font-size:.82rem;color:#91a6c0;margin-top:18px}
+.photo-card{min-height:390px;border:1px solid rgba(66,215,255,.3);border-radius:26px;padding:16px;background:linear-gradient(145deg,rgba(22,139,255,.18),rgba(255,255,255,.03));box-shadow:0 25px 80px rgba(0,0,0,.25);position:relative}
+.photo-placeholder{min-height:356px;height:100%;border-radius:18px;background:linear-gradient(145deg,#152c45,#091522);display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;border:1px dashed rgba(255,255,255,.25)}
+.photo-placeholder .camera{font-size:3rem;display:block;margin-bottom:12px}.photo-placeholder strong{display:block;font-size:1.2rem}.photo-placeholder p{color:var(--muted);max-width:280px;margin:8px auto 0;font-size:.92rem}
+.photo-tag{position:absolute;bottom:28px;left:28px;background:rgba(7,17,31,.92);border:1px solid var(--line);padding:11px 15px;border-radius:12px;font-weight:800}
+section{padding:70px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 36px}.section-head h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.1;margin:0 0 13px}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(22,139,255,.16);font-size:1.45rem;margin-bottom:18px}.card h3{margin:0 0 8px;font-size:1.15rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
+.about{background:#0a1727}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:center}.mini-photo{min-height:300px;border-radius:22px;border:1px dashed rgba(255,255,255,.25);background:linear-gradient(145deg,#183754,#091522);display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted)}.about h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.1;margin:0 0 16px}.about p{color:var(--muted)}.checks{padding:0;list-style:none;display:grid;gap:10px;margin:22px 0}.checks li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:10px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}.contact-panel{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:20px}.contact-panel h3{margin-top:0}.contact-panel p{color:var(--muted)}form{display:grid;gap:13px}label{font-size:.9rem;font-weight:700}input,select,textarea{width:100%;margin-top:6px;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:#07111f;color:white;font:inherit}textarea{min-height:90px;resize:vertical}.form-note{font-size:.8rem;color:var(--muted)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;z-index:20;box-shadow:0 8px 30px rgba(0,0,0,.35);border-radius:999px}
+@media(max-width:800px){nav a:not(.btn){display:none}.hero{padding:50px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:30px}.photo-card{min-height:310px}.photo-placeholder{min-height:276px}.cards{grid-template-columns:1fr}.about-grid{gap:24px}section{padding:54px 0}.brand{font-size:1.55rem}}
+
+.hero-photo{padding:0!important;overflow:hidden;border:0!important;background:#07111f!important}
+.hero-photo img{width:100%;height:100%;min-height:356px;object-fit:cover;object-position:center 22%;display:block;border-radius:18px}
+.about-photo{padding:0!important;overflow:hidden}
+.about-photo img{width:100%;height:100%;min-height:300px;object-fit:cover;object-position:center 25%;display:block;border-radius:22px}
+.gallery{background:#07111f}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.gallery-grid img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 15px 45px rgba(0,0,0,.25)}
+@media(max-width:800px){.hero-photo img{min-height:310px}.gallery-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#inicio" aria-label="21go início">21go<span>!</span></a>
+  <nav aria-label="Navegação principal">
+    <a href="#beneficios">Benefícios</a><a href="#sobre">Sobre</a><a href="#galeria">Fotos</a><a href="#contato">Contato</a>
+    <a class="btn" href="https://wa.me/5521983214692?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20prote%C3%A7%C3%A3o%20veicular%20da%2021go%21" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Proteção veicular • 21go!</span>
+    <h1>Seu veículo merece <span>mais cuidado.</span></h1>
+    <p class="lead">Conheça as opções de proteção veicular da 21go! Tire suas dúvidas e fale diretamente com Ariel para receber informações e consultar as condições disponíveis para o seu veículo.</p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/5521983214692?text=Ol%C3%A1%2C%20Ariel!%20Quero%20consultar%20a%20prote%C3%A7%C3%A3o%20veicular%20da%2021go%21" target="_blank" rel="noopener">💬 Consultar pelo WhatsApp</a>
+      <a class="btn outline" href="#beneficios">Conhecer os benefícios</a>
+    </div>
+    <p class="fine">Atendimento direto com Ariel Cerqueira • WhatsApp: (21) 98321-4692</p>
+  </div>
+  <div class="photo-card">
+    <div class="photo-placeholder hero-photo">
+      <img src="foto-ariel-21go-1.png" alt="Ariel Cerqueira com a identidade visual da 21go!" loading="eager">
+    </div>
+    <div class="photo-tag">Ariel Cerqueira · 21go!</div>
+  </div>
+</div></section>
+
+<section id="beneficios"><div class="wrap">
+  <div class="section-head"><h2>Mais tranquilidade para seguir caminho</h2><p>Entenda as opções disponíveis e escolha com informação, transparência e atendimento próximo.</p></div>
+  <div class="cards">
+    <article class="card"><div class="icon">🚗</div><h3>Para o seu veículo</h3><p>Consulte as opções e condições de proteção disponíveis para carros e outros veículos, conforme os critérios da associação.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Atendimento próximo</h3><p>Converse diretamente com Ariel pelo WhatsApp para tirar dúvidas e entender como funciona a adesão.</p></article>
+    <article class="card"><div class="icon">📋</div><h3>Informação clara</h3><p>Peça detalhes sobre coberturas, regras, assistência, valores e condições antes de tomar sua decisão.</p></article>
+  </div>
+</div></section>
+
+<section class="about" id="sobre"><div class="wrap about-grid">
+  <div class="mini-photo about-photo"><img src="foto-ariel-21go-2.png" alt="Ariel Cerqueira com camisa azul da 21go!" loading="lazy"></div>
+  <div><span class="eyebrow">Quem atende você</span><h2>Conte com um atendimento direto e atencioso.</h2><p>Sou Ariel Cerqueira e posso ajudar você a conhecer as opções de proteção veicular da 21go! Entre em contato para consultar informações adequadas ao seu veículo.</p>
+    <ul class="checks"><li>Converse sem compromisso</li><li>Tire dúvidas sobre as condições</li><li>Consulte valores e disponibilidade para seu veículo</li></ul>
+    <a class="btn" href="https://wa.me/5521983214692?text=Ol%C3%A1%2C%20Ariel!%20Quero%20tirar%20d%C3%BAvidas%20sobre%20a%2021go%21" target="_blank" rel="noopener">Falar com Ariel</a>
+  </div>
+</div></section>
+
+
+<section id="galeria" class="gallery"><div class="wrap">
+  <div class="section-head"><h2>Conheça a 21go!</h2><p>Veja mais materiais da 21go! e fale comigo para consultar as condições para seu veículo.</p></div>
+  <div class="gallery-grid">
+    <img src="arte-21go-1.png" alt="Material promocional 21go! com contato de Ariel Cerqueira" loading="lazy">
+    <img src="arte-21go-2.png" alt="Material promocional 21go! Proteção Patrimonial" loading="lazy">
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap">
+  <div class="section-head"><h2>Peça informações</h2><p>Preencha os dados abaixo e o site abrirá uma conversa no WhatsApp com sua mensagem pronta.</p></div>
+  <div class="contact-grid">
+    <div class="contact-panel"><h3>Vamos conversar?</h3><p>Informe os dados básicos do veículo para facilitar o atendimento.</p><p><strong>Responsável:</strong> Ariel Cerqueira</p><p><strong>WhatsApp:</strong> (21) 98321-4692</p><a class="btn" href="https://wa.me/5521983214692" target="_blank" rel="noopener">Abrir WhatsApp</a></div>
+    <div class="contact-panel"><form id="leadForm">
+      <label>Seu nome<input name="nome" required placeholder="Como podemos chamar você?"></label>
+      <label>Tipo de veículo<select name="veiculo" required><option value="">Selecione</option><option>Carro</option><option>Moto</option><option>Utilitário</option><option>Outro</option></select></label>
+      <label>Modelo e ano (opcional)<input name="modelo" placeholder="Ex.: modelo / ano"></label>
+      <label>Sua dúvida (opcional)<textarea name="mensagem" placeholder="Conte o que você gostaria de saber"></textarea></label>
+      <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+      <p class="form-note">Os dados são usados apenas para montar a mensagem que você escolheu enviar pelo WhatsApp; nada é enviado automaticamente.</p>
+    </form></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot"><span><strong>21go!</strong> · Proteção veicular</span><span>Atendimento: Ariel Cerqueira · (21) 98321-4692</span><span>Consulte regras, coberturas e condições antes da adesão.</span></div></footer>
+<a class="btn whatsapp-float" href="https://wa.me/5521983214692?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%2021go%21" target="_blank" rel="noopener" aria-label="Falar com a 21go pelo WhatsApp">💬 WhatsApp</a>
+<script>
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(this);
+  const lines = [
+    'Olá, Ariel! Tenho interesse na proteção veicular da 21go!',
+    'Nome: ' + (f.get('nome') || ''),
+    'Veículo: ' + (f.get('veiculo') || ''),
+    'Modelo/ano: ' + (f.get('modelo') || 'Não informado'),
+    'Dúvida: ' + (f.get('mensagem') || 'Quero mais informações')
+  ];
+  window.open('https://wa.me/5521983214692?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>

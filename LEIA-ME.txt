@@ -1,0 +1,16 @@
+SITE 21GO! — ARIEL CERQUEIRA
+
+Arquivos:
+- index.html: site personalizado
+- foto-ariel-21go-1.png e foto-ariel-21go-2.png: imagens enviadas
+- arte-21go-1.png e arte-21go-2.png: artes promocionais enviadas
+
+Como visualizar:
+1. Extraia este ZIP mantendo todos os arquivos na mesma pasta.
+2. Abra index.html no navegador.
+
+WhatsApp configurado: (21) 98321-4692
+
+Importante:
+O site está pronto como arquivo local, mas para ter um endereço público é necessário publicar a pasta em um serviço de hospedagem.
+Confira as informações de cobertura, benefícios e situação regulatória da empresa antes de divulgar alegações específicas no site.
